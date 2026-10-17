@@ -3,21 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSG | Software Developer</title>
-    <style>
-        body {
-            background: #101014;
-            color: #f5f5f5;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        a { color: #80bfff; }
-    </style>
+    <meta name="theme-color" content="#0b0d12">
+    <meta name="description" content="LSG — Software Engineering student interested in software development and cybersecurity.">
+    <title>LSG | Software Engineering</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>LSG.</h1>
-    <p>Software Engineering Student</p>
-    <p>Personal website coming soon.</p>
+    <div class="container">
+
+        <header>
+            <div class="logo">lsg<span>.</span></div>
+
+            <div class="status">
+                <span class="dot"></span>
+                Portfolio in development
+            </div>
+        </header>
+
+        <main>
+            <div class="eyebrow">
+                Software Engineering / Cybersecurity
+            </div>
+
+            <h1>
+                Building things<br>
+                that <span>matter.</span>
+            </h1>
+
+            <p class="description">
+                I'm a Software Engineering student with an
+                interest in software development, cybersecurity,
+                and understanding how systems work.
+                <br><br>
+                This space is currently being built.
+                In the meantime, you can find my work on GitHub.
+            </p>
+
+            <div class="links">
+                <a
+                    class="button primary"
+                    href="https://github.com/leordeansg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View GitHub ↗
+                </a>
+
+                <a class="button" href="https://linkedin.com/inleordeansg">
+                    LinkedIn ↗
+                </a>
+
+            </div>
+        </main>
+
+        <footer>
+            <span>© <span id="year"></span> LSG</span>
+            <span>lsg.software</span>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
 </body>
 </html>
