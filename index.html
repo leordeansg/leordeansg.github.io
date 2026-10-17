@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +15,28 @@
         <div class="links">
             <a href="https://github.com/leordeansg">GitHub</a>
             <a href="https://www.linkedin.com/in/leordeansg/">LinkedIn</a>
-            <a href="#" onclick="navigator.clipboard.writeText('gabe.html'); return false;">Discord</a>
+            <button class="discord-link" onclick="document.getElementById('discord').showModal()">
+                Discord
+            </button>
         </div>
     </main>
+
+    <dialog id="discord">
+        <h3>Discord</h3>
+        <p>gabe.html</p>
+
+        <div class="dialog-buttons">
+            <button onclick="copyDiscord()">Copy username</button>
+            <button onclick="document.getElementById('discord').close()">Close</button>
+        </div>
+    </dialog>
+
+    <script>
+        function copyDiscord() {
+            navigator.clipboard.writeText("gabe.html").then(() => {
+                document.querySelector(".dialog-buttons button").textContent = "Copied!";
+            });
+        }
+    </script>
 </body>
 </html>
